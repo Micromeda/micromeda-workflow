@@ -1,1 +1,0 @@
-pygenprop==0.5
