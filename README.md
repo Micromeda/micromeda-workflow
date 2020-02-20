@@ -183,7 +183,7 @@ N/A
 
 
 ### 3. Annotate Domains
-Find all the ```.faa``` files and run [InterProScan](https://github.com/ebi-pf-team/interproscan) on them. The ```-j 1``` flag of ```parallel``` ensures that only one copy of InterProScan is run at a time (equivalent to [xargs](https://en.wikipedia.org/wiki/Xargs)). Because [InterProScan](https://github.com/ebi-pf-team/interproscan) is already mult-threaded we don't need to run muliple copies.
+Find all the ```.faa``` files and run [InterProScan](https://github.com/ebi-pf-team/interproscan) on them. The ```-j 1``` flag of ```parallel``` ensures that only one copy of InterProScan is run at a time (equivalent to [xargs](https://en.wikipedia.org/wiki/Xargs)). Because [InterProScan](https://github.com/ebi-pf-team/interproscan) is already multi-threaded we don't need to run muliple processes.
 
 ```shell
 find . -maxdepth 1 -name "*.faa" | parallel -j 1 ./run_docker_interproscan.sh {}
